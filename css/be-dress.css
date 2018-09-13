@@ -1,0 +1,541 @@
+@import url('normalize.css');
+/*@import url('flexboxgrid.css');*/
+@import url('owl-carousel.css');
+
+/* Basics */
+
+* {
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html{
+	font-size: 16px;
+}
+
+body {
+  background: #fff;
+  color: #212121;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Type */
+
+p {
+	margin: 0 auto 1.3rem;
+}
+
+p.is-lead{
+	font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4d4d4d;
+	margin-bottom: 1.25rem;
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 4.236rem;
+	margin-top: 0;
+}
+
+h2{
+	font-size: 3.938rem;
+}
+
+@media (max-width: 50rem) {
+	h3 {
+		font-size: 1.75rem;
+	}
+}
+@media (min-width: 50rem) {
+	h3 {
+		font-size: 2.618rem;
+	}
+}
+
+h4 {
+	font-size: 1.618rem;
+}
+h5{
+  font-size: 1.25rem;
+}
+h6{
+  font-size: 1rem;
+}
+
+small, .is-small {
+	font-size: 0.85rem;
+}
+
+a{
+	color: #FF6A88;
+	font-family: inherit;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+a, button, input, img, textarea{
+	transition: all 0.25s ease-in-out;
+}
+
+/* Images */
+
+img{
+	height: auto;
+	max-width: 100%;
+  width: 100%;
+}
+
+
+/* Header */
+
+header{
+	display: block;
+	padding: 2.5rem 2.5rem 0;
+}
+
+/* Brand */
+
+.brand a, .brand a img{
+	display: inline-block;
+}
+
+.brand a img{
+	vertical-align: middle;
+	width: auto;
+}
+.brand a img:first-child{
+	height: 30px;
+	margin-right: 1rem;
+}
+.brand a img:last-child{
+	height: 12px;
+}
+
+
+/* Menu */
+
+.brand, nav, .menu{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.brand{
+	padding-top: 6px;
+}
+
+nav{
+	float: right;
+}
+
+.menu a{
+	font-weight: 700;
+	margin-right: 40px;
+}
+.menu a:last-child{
+	margin-right: 0;
+}
+
+.menu.user{
+	margin-left: 80px;
+}
+
+.menu.main a{
+	color: #616161;
+}
+.menu.main a:hover{
+	color: #212121;
+}
+
+/* Home */
+
+.body-home{
+	background-image: url(../img/bg/bg-home.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+/* Main Statement */
+
+.main-statement{
+	margin-top: 120px;
+}
+
+.main-statement .image,
+.main-statement .content{
+	display: inline-block;
+	vertical-align: top;
+}
+.main-statement .image{
+	padding-top: 1rem;
+	width: 48px;
+}
+.main-statement .content{
+	padding-left: 1rem;
+}
+
+/* Buttons */
+
+.is-btn{
+	border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit; 
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  vertical-align: middle;
+}
+
+.is-btn:hover{
+	box-shadow: 0 6px 24px -7px rgba(0,0,0,0.20);
+}
+
+.is-btn.is-primary{
+	background-image: linear-gradient(-135deg, #FF9A8B 0%, #FF6A88 48%, #FF99AC 100%);
+	color: #fff;
+}
+
+.is-size-block{
+	display: block;
+	width: 100%;
+}
+
+.is-large{
+	font-size: 1.1rem;
+	padding: 1rem 0;
+}
+
+/* Carousel */
+
+.carousel{
+	padding-bottom: 80px;
+	padding-left: 8%;
+	padding-top: 48px;
+	position: relative;
+}
+
+.owl-carousel{
+	overflow: hidden;
+}
+.owl-carousel .owl-item{
+	border-radius: 8px; 
+	box-shadow: 0 6px 24px -7px rgba(0,0,0,0.20);
+	float: left;
+	height: 220px;
+	overflow: hidden;
+	position: relative;
+}
+
+.owl-carousel .owl-item .title{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: white;
+	height: 64px;
+}
+.owl-carousel .owl-item .title a{
+	display: block;
+	padding: 1.25rem 1rem;
+}
+.owl-carousel .owl-item .title a img{
+	width: 1.2rem;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 0.5rem;
+}
+
+.owl-prev, .owl-next{
+	background-image: linear-gradient(-135deg, #FF9A8B 0%, #FF6A88 48%, #FF99AC 100%);
+	border: none;
+	border-radius: 12px;
+	height: 48px;
+	color: #fff;
+	font-weight: 700;
+	position: absolute;
+	text-align: center;
+	top: 128px;
+	width: 48px;
+	z-index: 1000;
+}
+
+.owl-prev:hover, .owl-next:hover{
+	box-shadow: 0 6px 24px -7px rgba(0,0,0,0.20);
+	transform: scale(1.025);
+}
+.owl-prev{
+	left: 7%;
+}
+.owl-next{
+	right: 7%;
+}
+
+/*Features*/
+
+.features{
+	background-image: url(../img/bg/bg-shape.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 100%;
+	padding-bottom: 80px;
+	padding-top: 80px;
+}
+.features h3{
+	margin-bottom: 5rem;
+	max-width: 680px;
+}
+
+.feature.tiny {
+	margin: 2.5rem auto;
+}
+.feature.tiny img,
+.feature.tiny p{
+	display: inline-block;
+	vertical-align: middle;
+}
+.feature.tiny p{
+	margin-bottom: 0;
+}
+.feature.tiny img{
+	margin-right: 24px;
+	width: 80px;
+}
+.feature.big{
+	position: relative;
+}
+
+.feature.big img{
+	height: 420px;
+}
+.feature.big h2{
+	margin-top: 1rem;
+}
+
+/*New Arrivals*/
+
+.card.dress-item{
+	background-color: #fff;
+	border-radius: 8px;
+	display: block;
+	margin: 0 auto 1.5rem;
+	overflow: hidden;
+	width: 98%;
+}
+.card.dress-item:hover{
+	box-shadow: 0 6px 24px -7px rgba(0,0,0,0.20);
+	transition: all 0.25s ease-in-out;
+}
+
+.card.dress-item .image{
+	height: 180px;
+	overflow: hidden;
+}
+.card.dress-item .info .name,
+.card.dress-item .info .views{
+	float: left;
+	padding: 1rem;
+}
+.card.dress-item .info .name{
+	width: 60%;
+}
+
+.card.dress-item .info .views{
+	text-align: right;
+	width: 40%;
+}
+
+.card.dress-item .info .views img,
+.card.dress-item .info .views b{
+	display: inline-block;
+	vertical-align: middle;
+}
+.card.dress-item .info .views img{
+	width: 24px;
+}
+
+.card.dress-item .description,
+.card.dress-item .price{
+	padding: 1rem 1rem 0;
+}
+
+.card.dress-item .price{
+	border-top: 1px solid rgba(0,0,0,0.05);
+	text-align: center;
+}
+
+.current-price,
+.last-price{
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+.current-price{
+	font-size: 2rem;
+	margin-right: 1rem; 
+}
+.last-price{
+	text-decoration: line-through;
+}
+
+.buy-cta{
+	padding: 1rem;
+}
+
+.section-title{
+	padding-bottom: 2.5rem;
+}
+.section-title img{
+	display: inline-block;
+	margin-right: 1rem;
+	vertical-align: middle;
+	width: 24px;
+}
+
+.view-more{
+	padding: 0 1rem 1.5rem;
+}
+.view-more a{
+	font-weight: bold;
+}
+
+.view-more img{
+	display: inline-block;
+	margin-right: 0.25rem;
+	vertical-align: middle;
+	width: 16px;
+}
+
+/*Social proof*/
+.social-proof{
+	background-image: url(../img/bg/bg-shape-bottom.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 480px;
+	border-top: 1px solid rgba(0,0,0,0.05);
+	padding: 2.5rem 0;
+}
+
+/*Testimonial*/
+
+.testimonial{
+	background-color: #fff;
+	border-radius: 8px;
+	float: left;
+	max-width: 380px;
+	margin-bottom: 1.5rem;
+	margin-right: 1.5rem;
+	overflow: hidden;
+	width: 95%;
+}
+.testimonial:hover{
+	box-shadow: 0 6px 24px -7px rgba(0,0,0,0.20);
+	transition: all 0.25s ease-in-out;
+}
+
+.testimonial:last-child{
+	margin-right: 0;
+}
+
+.testimonial .avatar,
+.testimonial .info{
+	float: left;
+}
+.testimonial .avatar{
+	padding: 1rem 0 0 1rem;
+	width: 30%;
+}
+.testimonial .avatar img{
+	border-radius: 1.25rem;
+	overflow: hidden;
+}
+
+.testimonial .info{
+	padding: 1rem;
+	width: 70%;
+}
+.testimonial .info img{
+	margin-bottom: 0.5rem;
+	width: 100px;
+}
+.testimonial .info p{
+	margin-bottom: 0.5rem;
+}
+.testimonial .info p:last-child{
+	margin-bottom: 0;
+}
+
+/* Footer */
+
+footer{
+	padding: 5rem 0; 
+}
+
+.footer-menu a{
+	display: block;
+	text-decoration: none;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	width: auto; 
+}
+
+.social-media a{
+	float: right;
+	margin-left: 1.5rem;
+}
+
+
+/* Utilities */
+
+.is-text-primary{
+	color: #FF6A88;
+}
+.is-text-muted{
+	color: #9E9E9E;
+}
+
+.is-text-bold{
+	font-weight: 700;
+}
+
+.has-bg-white{
+	background-color: #fff;
+}
+.has-bg-gray{
+	background-color: #F7F7F7;
+}
+
+.has-text-right{
+	text-align: right!important;
+}
+.has-text-justify{
+	text-align: justify!important;
+}
+
+
+
+/*Animations*/
+@keyframes dance{
+	0%, 100%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(2deg);
+	}
+}
+
+.dancer{
+	animation: dance 2s ease-in-out infinite;
+}
