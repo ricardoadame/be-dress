@@ -37,4 +37,18 @@ $(document).ready(function(){
   });
 
 
+  var preventClick = false;
+
+  $('.disabled').click(function(e) {
+
+      if (!preventClick) {
+          $(this).html($(this).html());
+      }
+
+      preventClick = true;
+
+      return false;
+  });
+
+
 });

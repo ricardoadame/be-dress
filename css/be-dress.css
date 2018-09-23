@@ -76,9 +76,9 @@ small, .is-small {
 
 a{
 	color: #FF6A88;
+	display: inline-block;
 	font-family: inherit;
 	text-decoration: none;
-	vertical-align: middle;
 }
 
 a, button, input, img, textarea{
@@ -103,19 +103,19 @@ header{
 
 /* Brand */
 
-.brand a, .brand a img{
+.brand a, .brand a img, .auth .brand img{
 	display: inline-block;
 }
 
-.brand a img{
+.brand a img, .auth .brand img{
 	vertical-align: middle;
 	width: auto;
 }
-.brand a img:first-child{
+.brand a img:first-child, .auth .brand img:first-child{
 	height: 30px;
 	margin-right: 1rem;
 }
-.brand a img:last-child{
+.brand a img:last-child, .auth .brand img:last-child{
 	height: 12px;
 }
 
@@ -285,10 +285,6 @@ nav{
 /*Features*/
 
 .features{
-	background-image: url(../img/bg/bg-shape.png);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	background-size: 100%;
 	padding-bottom: 80px;
 	padding-top: 80px;
 }
@@ -695,6 +691,90 @@ header.pages .has-icon img{
 	display: block;
 }
 
+/*Admin Pages*/
+
+.auth .brand{
+	padding-bottom: 5rem;
+	padding-top: 20%;
+}
+.btn-admin{
+	margin: 1.5rem auto;
+}
+
+.btn-facebook-login{
+  background: #307EFF;
+  border-radius: 2rem;
+  color: #FFFFFF;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 auto 1.5rem;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-facebook-login:hover{
+  box-shadow: 0px 16px 48px -16px #307EFF;
+}
+.btn-facebook-login img{
+  display: inline-block;
+  height: 1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  width: 1rem;
+}
+
+.auth .disclaimer{
+	margin: 2.5rem auto;
+}
+
+/*Categories*/
+
+.category-page{
+	padding-bottom: 80px;
+	padding-top: 80px;
+}
+
+.categories-sidebar{
+	border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+	padding: 1.5rem;
+}
+
+.categories-sidebar a{
+	display: block;
+	font-weight: bold;
+	padding: 0.5rem;
+}
+.categories-sidebar a:hover{
+	padding-left: 0.75rem;
+}
+.categories-sidebar a img{
+	display: inline-block;
+	margin-right: 0.25rem;
+	vertical-align: middle;
+	width: 0.5rem;
+}
+
+.categories-sidebar a.disabled,
+.categories-sidebar a.disabled:hover{
+	color: #C9C9C9;
+	cursor: default;
+	padding-left: 0.5rem;
+}
+
+
+.page-heading.daytime{
+	background-image: url(../img/bg/daytime-page-heading-bg.png);
+}
+.page-heading.long-dress{
+	background-image: url(../img/bg/long-dress-page-heading-bg.png);
+}
+.page-heading.wedding{
+	background-image: url(../img/bg/wedding-page-heading-bg.png);
+}
+
 /* Utilities */
 
 .is-text-primary{
@@ -723,6 +803,9 @@ header.pages .has-icon img{
 }
 .has-text-justify{
 	text-align: justify!important;
+}
+.has-text-centered{
+	text-align: center!important;
 }
 
 
