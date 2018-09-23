@@ -496,6 +496,204 @@ footer{
 	margin-left: 1.5rem;
 }
 
+/* Pages Navigation */
+
+header.pages{
+	background: #fff;
+	position: relative;
+}
+
+@media (min-width: 990px) {
+	header.pages{
+		padding-bottom: 48px;
+	}
+}
+
+header.pages .has-icon img{
+	display: inline-block;
+	margin: 0 4px; 
+	vertical-align: middle;
+	width: 16px;
+}
+
+.dropdown{
+  -webkit-animation: dropdownShow 0.25s ease-in-out forwards;
+    animation: dropdownShow 0.25s ease-in-out forwards;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 0.5rem;
+  box-shadow: 0 13px 32px -16px rgba(0,0,0,0.5);
+  display: none;
+  max-width: 280px;
+  overflow: hidden;
+  position: absolute;
+  right: 24px;
+  top: 6rem;
+  width: 100%;
+  z-index: 2100;
+}
+
+.dropdown a{
+  color: rgba(0,0,0,0.4);
+  display: block;
+  padding: 0.75rem;
+}
+
+.dropdown a:hover{
+  color: #FF6A88;
+}
+
+.dropdown a:last-child{
+  background: rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+.dropdown a:last-child:hover{
+  background: #FF6A88;
+  color: #ffffff;
+}
+
+.dropdown.active{
+  display: block;
+}
+
+.rotate-icon{
+	transform: rotate(180deg);
+}
+
+
+/*Page Heading*/
+@media (min-width: 990px) {
+	.page-heading{
+		height: 220px;
+	}
+}
+
+.page-heading{
+	background-size: 100%;
+	background-position: center; 
+	background-repeat: no-repeat;
+}
+
+/*Sell*/
+
+.page-heading.sell{
+	background-image: url(../img/bg/page-heading-bg.png);
+}
+
+.new-dress-form{
+	padding: 80px 0; 
+}
+
+.standard-sizes, .number-sizes{
+	margin-bottom: 1.5rem;
+}
+.number-sizes .radio{
+	width: calc(100% / 8);
+}
+
+
+/*Forms*/
+
+.form-group{
+  margin-bottom: 2.5rem;
+  padding: 0 0.5rem; 
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea{
+  display: block;
+}
+
+.form-group label{
+  color: #9E9E9E;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select, .form-group textarea{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  font-family: inherit;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus{
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.form-group select{
+  background-image: url(../img/icons/caret-down-default.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.form-group select:focus{
+  background-image: url(../img/icons/caret-down-active.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.form-group textarea{
+  resize: none;
+}
+
+.radio{
+	color: #FF6A88;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: bold;
+	margin: 0 0.5rem 0.5rem;
+	vertical-align: middle;
+}
+
+.file-upload {
+  background-image: url(../img/icons/photo.svg);
+  background-position: 35% center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  border: 2px solid #C7C7CC !important;
+  position: relative !important;
+  border-radius: 0.5rem !important;
+  color: #C7C7CC !important;
+  cursor: pointer !important;
+  display: block !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: 700 !important;
+  margin: 1rem 0;
+  padding: 0.5rem !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+.file-upload:hover{
+  background-image: url(../img/icons/photo-primary.svg);
+  background-position: 35% 37.5%;
+  border: 2px solid #FF6A88!important;
+  color: #FF6A88!important;
+  cursor: pointer !important;
+  padding: 0.5rem !important;
+  -webkit-transition: all 0.25s ease-in-out !important;
+  transition: all 0.25s ease-in-out !important;
+}
+
+.file-upload input[type="file"] {
+  bottom: 0 !important;
+  left: 0 !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 1rem !important;
+  cursor: pointer !important;
+}
+
+.hint{
+	margin-top: 2.5rem;
+	display: block;
+}
 
 /* Utilities */
 
@@ -504,6 +702,9 @@ footer{
 }
 .is-text-muted{
 	color: #9E9E9E;
+}
+.is-text-white{
+	color: #ffffff;
 }
 
 .is-text-bold{
@@ -534,6 +735,23 @@ footer{
 	50%{
 		transform: rotate(2deg);
 	}
+}
+
+/*Animations*/
+
+@-webkit-keyframes dropdownShow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .dancer{

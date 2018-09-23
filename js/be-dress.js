@@ -17,5 +17,24 @@ $(document).ready(function(){
             nav:true
         }
     }
-})
+  })
+});
+
+$(document).ready(function(){
+  $('a.trigger').on('click', function(){
+    $(this).find('img').toggleClass('rotate-icon');
+
+    $('.dropdown').toggleClass('active');
+
+    return false;
+  });
+
+  var maxLength = 500;
+  $('textarea').keyup(function() {
+    var length = $(this).val().length;
+    var length = maxLength-length;
+    $('#chars').text(length);
+  });
+
+
 });
