@@ -568,6 +568,19 @@ header.pages .has-icon img{
 	transform: rotate(180deg);
 }
 
+.btn-more{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn-more img{
+	display: inline-block;
+	vertical-align: middle;
+	height: 1rem;
+	margin-left: 0.5rem;
+	width: 1rem;
+}
+
 
 /*Page Heading*/
 @media (min-width: 990px) {
